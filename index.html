@@ -58,6 +58,9 @@
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -78,6 +81,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
+  </ul>
+</nav>
 
 
 
@@ -112,9 +119,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
@@ -130,6 +141,105 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/23/Make-my-own-blog-step-by-step-on-MacOS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xiaotong Mo">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiaotong Mo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Xiaotong Mo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/03/23/Make-my-own-blog-step-by-step-on-MacOS/" class="post-title-link" itemprop="url">Make my own blog step by step</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-03-23 14:40:52 / Modified: 17:46:50" itemprop="dateCreated datePublished" datetime="2023-03-23T14:40:52+08:00">2023-03-23</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>To have a website customized for own use seems a common thought of every programmer.</p>
+<p>I have tried Gridea before and recently found Hexo a highly free tool to make a website. Strengths of Hexo are like:</p>
+<ul>
+<li>With an active community</li>
+<li>Plenty of shared themes and requiring very little coding skills</li>
+<li>Providing very clear tutorials for beginners to use Hexo</li>
+<li>Can be deployed to your own server or other code-hosting servers like GitHub.</li>
+<li>Easily writing contents using Markdown syntax</li>
+</ul>
+<p>So here are steps to build a website hosted on GitHub, to be specific, on <strong>MacOS</strong>.</p>
+<h1 id="Roadmap"><a href="#Roadmap" class="headerlink" title="Roadmap"></a>Roadmap</h1><p>​		</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR;</span><br><span class="line">		subgraph Installation</span><br><span class="line">      A0[Node.js]</span><br><span class="line">      C0[Hexo]</span><br><span class="line">      B0[Git]</span><br><span class="line">      D0[Markdown editor]</span><br><span class="line">		end</span><br><span class="line">		subgraph &quot;Build locally&quot;</span><br><span class="line">      A0 &amp; C0 </span><br><span class="line">      	--&gt;A1(Set up)</span><br><span class="line">      		--&gt;A2(Design)</span><br><span class="line">      		--&gt;A3(Preview)</span><br><span class="line">      D0</span><br><span class="line">      	--&gt;A2</span><br><span class="line">		end</span><br><span class="line">		subgraph &quot;Deploy to a server(or a hosting website)&quot;</span><br><span class="line">			B0 &amp; A3</span><br><span class="line">				--&gt;B1(Link GitHub and local hexo folder)</span><br><span class="line">				--&gt;B2(Deploy)</span><br><span class="line">		end</span><br><span class="line">		</span><br><span class="line">		e&gt;Plz try to click the nodes!]</span><br><span class="line">		</span><br><span class="line">		click A0 &quot;https://nodejs.org/en&quot;</span><br><span class="line">		click C0 &quot;https://hexo.io/docs/&quot;</span><br><span class="line">		click B0 &quot;https://git-scm.com/download/&quot;</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>Please follow the instructions on official websites of each tool. </p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://nodejs.org/en">Node.js</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://hexo.io/docs/">Hexo</a></p>
+<blockquote>
+<p> Briefly, in terminal.app, run:</p>
+<p><code>npm install hexo-cli -g</code></p>
+<p>Or if familiar with <code>npm</code> then please run:</p>
+<p> <code>npm install hexo</code></p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://git-scm.com/download/">Git</a></p>
+</li>
+<li><p>Any Markdown Editor: Typora(strongly recommended), Obssidian, VSCode……</p>
+</li>
+</ul>
+<h1 id="Build-locally"><a href="#Build-locally" class="headerlink" title="Build locally"></a>Build locally</h1><h2 id="Set-up"><a href="#Set-up" class="headerlink" title="Set up"></a>Set up</h2><h2 id="Design"><a href="#Design" class="headerlink" title="Design"></a>Design</h2><h2 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a>Preview</h2>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -167,8 +277,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2023-03-23 04:22:23" itemprop="dateCreated datePublished" datetime="2023-03-23T04:22:23+08:00">2023-03-23</time>
+      <time title="Created: 2023-03-23 04:22:23 / Modified: 14:37:50" itemprop="dateCreated datePublished" datetime="2023-03-23T04:22:23+08:00">2023-03-23</time>
     </span>
 
   
